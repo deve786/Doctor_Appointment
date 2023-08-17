@@ -5,5 +5,13 @@ Department
 {% endblock %}
 
 {% block content%}
-Department Page
+{% for d in dept %}
+<div class="card float-start p-2 m-2 w-25 " style=" height: 30vh" >
+    <div class="card-body">
+      <h5 class="card-title">{{d.dep_name}}</h5>
+      <p class="card-text">{{d.dep_description}}</p>
+      
+    </div>
+  </div>
+  {% endfor %}
 {% endblock %}
