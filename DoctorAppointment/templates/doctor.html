@@ -5,5 +5,16 @@ Doctor
 {% endblock %}
 
 {% block content%}
-Doctor Page
+<div class='mx-2 my-2'>
+{% for d in doc %}
+<div class=" card float-start m-1 bg-light" style="width: 18rem;">
+    <img src="{{d.doc_image}}" style="height: 15rem;" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{d.doc_name}}</h5>
+      <p class="card-text">{{d.doc_spec}}</p>
+      <a href="#" class="btn btn-primary">More</a>
+    </div>
+  </div>
+  {% endfor %}
+</div>
 {% endblock %}
